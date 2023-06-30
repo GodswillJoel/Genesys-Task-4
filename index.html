@@ -5,62 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valutico</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="UTF-8"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
     <body>
-        <div>
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="logo.png" width="100px" >
-                </div>
-                
-                <div class="ulist">
-                    <p   style="color: rgb(9, 72, 145);">Home</p>
-    
-                    <select>
+        <header>
+            <div class="inner-width">
+                <a href=""><img class="logo" src="images/logo.png"></a>
+                <i class="menu-toggle-btn fa fa-bars" id="menu-Bar" ></i>
+                <nav class="navigation-menu">
+                    <a href="#" class="element"  style="padding: 20px 50px;"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <select class="element"  >
                         <option>Solutions</option>
                         <option>sort by popularity</option>
                     </select>
-                    <select>
+                    <select class="element" >
                         <option>Your work</option>
                         <option>sort by popularity</option>
                     </select>
-                    <select>
+                    <select class="element" >
                         <option>Company</option>
                         <option>sort by popularity</option>
                     </select>
-                    <button class="btn1">Request a Demo 
-                       <i class="fa fa-check-square-o"></i>
-                    </button>
-                    <div class="sub">
+                    <button class="btn1 element">Request Demo <i class="fa fa-check-square-o"></i></button>
+                    <div class="sub element">
                         <p class="sub1">C</p>
                         <P class="sub1">D</P>
                     </div>
-                </div>
-                
-            </nav>
+                </nav> 
+            </div>
+        </header>
+            
+            
 
 
     
             <div class="container1">
 
-                <header class="head-one">
+                <div class="head-one">
                     <H1>The World's Leading Business Valuation Software</H1>
-                    <p>valutico provides the financial services industry and valuation 
+                    <p>Valutico provides the financial services industry and valuation 
                         experts with data driven tools to perform accurate company
                         valuations faster and more accurately than ever before.
                     </p>
-                </header>
+                </div>
 
                 <div class="btn">
-                    <button class="btn1">Request a Demo <i class="fa fa-check-square-o"></i></button>
+                    <button class="btn1">Request Demo <i class="fa fa-check-square-o"></i></button>
                     <button class="btn2">Sign Up/Log in</button>
                 </div>
 
 
                 <div>
-                    <img src="image.png" alt="" width="700px">
+                    <img class="CENT" src="images/image.png">
                 </div>
 
 
@@ -77,26 +75,26 @@
                 <div class="tables">
                     <div>
                         <tr>
-                            <td> <img src="allinial.png"  class="brands-img"> </td>
-                            <td> <img src="oaklins.png"  class="brands-img"> </td>
-                            <td> <img src="russell.png"  class="brands-img"></td>
-                            <td> <img src="crowe.png"  class="brands-img"> </td>
+                            <td> <img src="images/allinial.png"  class="brands-img"> </td>
+                            <td> <img src="images/oaklins.png"  class="brands-img"> </td>
+                            <td> <img src="images/russell.png"  class="brands-img"></td>
+                            <td> <img src="images/crowe.png"  class="brands-img"> </td>
                         </tr>
                     </div>
                     <div>
                         <tr>
-                            <td> <img src="bcrh.png"  class="brands-img"> </td>
-                            <td> <img src="praxity.png"  class="brands-img" ></td>
-                            <td> <img src="bakertilly.png"  class="brands-img"> </td>
-                            <td> <img src="sc.png"  class="brands-img"> </td>
+                            <td> <img src="images/bcrh.png"  class="brands-img"> </td>
+                            <td> <img src="images/praxity.png"  class="brands-img" ></td>
+                            <td> <img src="images/bakertilly.png"  class="brands-img"> </td>
+                            <td> <img src="images/sc.png"  class="brands-img"> </td>
                         </tr>
                     </div>
                     <div>
                         <tr>
-                            <td> <img src="pandea.png"  class="brands-img"> </td>
-                            <td> <img src="global.png"  class="brands-img"> </td>
-                            <td> <img src="cdi.png"  class="brands-img"> </td>
-                            <td> <img src="rodl.png"  class="brands-img"> </td>
+                            <td> <img src="images/pandea.png"  class="brands-img"> </td>
+                            <td> <img src="images/global.png"  class="brands-img"> </td>
+                            <td> <img src="images/cdi.png"  class="brands-img"> </td>
+                            <td> <img src="images/rodl.png"  class="brands-img"> </td>
                         </tr>
                     </div>
 
@@ -105,7 +103,7 @@
                                                             <!-- DARK BG -->
 
 
-                    <div class="bg-black">
+                    <div class="bg-black" >
                         <div class="box1">
                             <h3>Why valutico</h3>
                             <p>An award winning fin-tech providing range of company valuation solutions. 
@@ -174,7 +172,7 @@
                         </div>
                                         <!-- FOOTER-IMG -->
                         <div>
-                            <img src="image1.png" style="width: 30rem;">
+                            <img class="FOOTER-IMG" src="images/image1.png">
                         </div>
                     </div>
                     <div>
@@ -185,7 +183,12 @@
             
                 
             </div>
-        </div>
-        
+    
+        <script type="text/javascript">
+            $(".menu-toggle-btn").click(function(){
+                $(this).toggleClass("fa-times");
+                $(".navigation-menu").toggleClass("active");
+            });
+        </script>
     </body>
 </html>
