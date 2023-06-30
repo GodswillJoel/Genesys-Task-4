@@ -1,26 +1,32 @@
 body {
   font-family: Verdana, sans-serif;
   display: flex;
-  text-align: center;
-}
-
-div .navbar {
-  display: flex;
-  flex-wrap: wrap;
-  place-content: center;
-  justify-content: center;
-  text-align: center;
-}
-
-div .container1 {
-  display: flex;
   flex-direction: column;
   text-align: center;
+}
+header {
+  box-shadow: 1px 0px 3px;
+}
+.logo {
+  margin: 50px;
+}
+
+button {
+  font-size: 1.2rem;
+}
+a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.inner.width {
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: auto;
 }
 
 .btn1 {
   color: white;
-  background-color: rgb(109, 175, 10);
+  background-color: rgb(143, 210, 41);
   padding: 10px 20px;
   margin: 10px;
   border: none;
@@ -28,36 +34,28 @@ div .container1 {
 }
 
 .btn2 {
-  color: rgb(109, 175, 10);
+  color: rgb(143, 210, 41);
   background-color: rgb(255, 255, 255);
   padding: 10px 20px;
   margin: 10px;
-  border: 1px solid rgb(109, 175, 10);
+  border: 1px solid rgb(143, 210, 41);
   border-radius: 5px;
 }
 
-.navbar {
+.navigation-menu {
   display: flex;
-  flex-direction: row;
-  box-shadow: 0px 0px 3px rgb(126, 126, 126);
-  padding: 10px 2px;
-  justify-content: space-around;
-  margin-left: 10px;
+  justify-content: center;
 }
 
-.logo {
-  margin: 15px;
-}
-
-.ulist {
-  display: flex;
-  list-style: none;
-  margin-left: 20px;
+.element:hover {
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 select {
   border: none;
   margin-left: 30px;
+  font-size: 1.2rem;
 }
 
 .sub {
@@ -77,6 +75,9 @@ select {
   border-radius: 50px;
 }
 
+.CENT {
+  width: 700px;
+}
 .geo {
   padding: 5000px;
   display: contents;
@@ -107,6 +108,7 @@ select {
   color: white;
   display: flex;
   flex-direction: column;
+  border: 11px solid rgb(255, 255, 255);
   text-align: left;
 }
 
@@ -145,14 +147,14 @@ select {
 
 .btn1:hover {
   background-color: white;
-  border: 1px solid rgb(109, 175, 10);
-  color: rgb(109, 175, 10);
+  border: 1px solid rgb(143, 210, 41);
+  color: rgb(143, 210, 41);
   transition: 0.2s;
 }
 
 .btn1:active {
   color: white;
-  background-color: rgb(109, 175, 10);
+  background-color: rgb(143, 210, 41);
   padding: 8px 18px;
   margin: 10px;
   border: none;
@@ -160,16 +162,148 @@ select {
 }
 
 .btn2:hover {
-  background-color: rgb(109, 175, 10);
+  background-color: rgb(143, 210, 41);
   color: white;
   transition: 0.2s;
 }
 
 .btn2:active {
-  color: rgb(109, 175, 10);
+  color: rgb(143, 210, 41);
   background-color: rgb(255, 255, 255);
   padding: 8px 18px;
   margin: 10px;
-  border: 1px solid rgb(109, 175, 10);
+  border: 1px solid rgb(143, 210, 41);
   border-radius: 5px;
+}
+
+.menu-toggle-btn {
+  /* height: 90px; */
+  line-height: 125px !important;
+  display: none !important;
+  cursor: pointer;
+  float: right;
+}
+
+@media screen and (max-width: 900px) {
+  .menu-toggle-btn {
+    display: block !important;
+  }
+  .navigation-menu {
+    position: fixed;
+    width: 100%;
+    max-width: 200px;
+    background: rgb(127, 127, 127);
+    top: 90px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navigation-menu::before {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(68, 68, 68);
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+  a {
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .sub.element {
+    display: flex;
+    align-self: center;
+  }
+  .element {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  .container1 {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar {
+    max-width: 100rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-cont {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 3rem;
+  }
+
+  .bg-black {
+    max-width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+  }
+  .box2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 500px;
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .CENT {
+    width: 100%;
+    margin: 3rem;
+  }
+  .FOOTER-IMG {
+    width: 100%;
+  }
+
+  select {
+    max-width: 120px;
+    margin-left: 30px;
+    font-size: 1.2rem;
+    margin-top: 20rem;
+  }
+  .navigation-menu.active {
+    display: block;
+  }
 }
